@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>Document</title>
+	<script>   
+	(function (doc, win) {
+	        var docEl = doc.documentElement,
+	            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	            recalc = function () {
+	                var clientWidth = docEl.clientWidth;
+	                if (!clientWidth) return;
+	                if(clientWidth>=640){
+	                    docEl.style.fontSize = '100px';
+	                }else{
+	                    docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+	                }
+	            };
+
+	        if (!doc.addEventListener) return;
+	        win.addEventListener(resizeEvt, recalc, false);
+	        doc.addEventListener('DOMContentLoaded', recalc, false);
+	    })(document, window);
+	</script> 
+	<style type="text/css">
+	body{
+		width: 100%;margin: 0;padding: 0;
+		width: 100%;
+
+	}
+	.header{
+		width: 100%;
+		height: 0.5rem;
+		background: blue;
+	}
+	.content{
+		width: 6.4rem;
+		height: 5rem;margin: 0 auto;
+		background: #eee;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	.footer{
+		width: 100%;
+		height: 0.5rem;
+		background: red;
+	}
+	.content div{
+		width: 1.5rem;
+		height: 2rem;
+		background: red;
+		/* margin-left: .2rem; */
+	}
+	div:nth-child(1){
+		background: black;
+
+	}
+	</style>
+</head>
+<body>
+	<div class="header"></div>
+	<div class="content">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<div class="footer"></div>
+</body>
+</html>
