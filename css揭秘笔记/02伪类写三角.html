@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		span{
+			display: block;
+			width: 100px;
+			background: #ccc;
+			border: 1px solid red;
+			padding: 6px 15px;
+			position: relative;
+		}
+		span:before{
+			content: '';padding:  5px;
+			position: absolute;
+			top: -6px ;left: 40px;
+			background: inherit;
+			
+			border: inherit;
+			border-right: 0;
+			border-bottom: 0;
+			transform: rotate(45deg);
+		}
+	</style>
+</head>
+<body>
+	<span>23456789</span>
+</body>
+</html>
