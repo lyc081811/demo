@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		(function(){
+			//常见的编程题1~100用递归算法完成累加
+			function add(start,end){
+				var num=0;
+				num+=start;
+				if(start<end){
+					num=num+add(start+1,end);
+				}
+				return num;
+			}
+			alert(add(1,100));
+		})()
+	</script>
+</body>
+</html>
