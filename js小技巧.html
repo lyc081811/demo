@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p title="这是一个数字">123</p>
+	<input type="checkbox" name="" checked>选中改变颜色
+	<script type="text/javascript">
+		var p=document.getElementsByTagName('p')[0];
+		var ipt=document.getElementsByTagName('input')[0];
+		alert(p.title);//不知道为什么对了
+		alert(p.getAttribute('title'));
+		if(ipt.checked){
+			p.style.color='red';
+		}
+		// -------------华丽的分割线-----------
+		function isBigEnough(element,index,array){
+			return (element>=10);
+		}
+		var result=[12,3,6,67,43].filter(isBigEnough);
+		alert(result);
+	</script>
+</body>
+</html>
